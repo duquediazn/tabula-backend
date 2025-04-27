@@ -18,12 +18,11 @@ Este repositorio contiene la API RESTful, la lógica de autenticación, la gesti
 
 ## Tecnologías principales
 
-- FastAPI
-- SQLModel + SQLAlchemy
-- PostgreSQL
-- JWT (access y refresh tokens)
-- WebSockets (FastAPI + frontend)
-- Python 3.11+
+- [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+)
+- [PostgreSQL](https://www.postgresql.org/)
+- [SQLModel](https://sqlmodel.tiangolo.com/) + [SQLAlchemy](https://www.sqlalchemy.org/) (ORM)
+- Autenticación JWT (access y refresh tokens)
+- [WebSocket](https://developer.mozilla.org/es/docs/Web/API/WebSockets_API) para notificaciones en tiempo real
 
 ---
 
@@ -123,12 +122,11 @@ This repository contains the RESTful API, authentication logic, stock management
 
 ## Main Technologies
 
-- FastAPI
-- SQLModel + SQLAlchemy
-- PostgreSQL
-- JWT (access and refresh tokens)
-- WebSockets (FastAPI + frontend)
-- Python 3.11+
+- [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+)
+- [PostgreSQL](https://www.postgresql.org/)
+- [SQLModel](https://sqlmodel.tiangolo.com/) + [SQLAlchemy](https://www.sqlalchemy.org/) (ORM)
+- JWT Authentication (access and refresh tokens)
+- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) for real-time notifications
 
 ---
 
