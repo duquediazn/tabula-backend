@@ -18,10 +18,14 @@ import os  # Para acceder a variables de entorno.
 # Cargar variables del archivo .env
 load_dotenv()
 
+def get_required_env(name: str) -> str:
+    value = os.getenv(name)
+    if not value:
+        raise Exception("Env var '"+name+"' is required but not found.")
+    return value
+
 # Clave secreta para firmar JWT
-SECRET_KEY = os.getenv(
-    "SECRET_KEY", "eaa10e914aaeb96f7494243535450597ed1bbd23502da94db4e236d0eea4a3d5"
-)
+SECRET_KEY = get_required_env("SECRET_KEY")
 
 # Algoritmo de encriptación JWT
 ALGORITHM = "HS256"
