@@ -250,7 +250,11 @@ def create_movement(
 
     # Controlamos que no se puedan meter productos con fecha de caducidad vencida.
     for linea in movement_data.lineas:
-        if linea.fecha_cad and linea.fecha_cad <= date.today():
+        if (
+            linea.fecha_cad
+            and linea.fecha_cad <= date.today()
+            and movement_data.tipo == "entrada"
+        ):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=(
