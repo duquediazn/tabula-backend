@@ -14,9 +14,6 @@ from fastapi.middleware.cors import CORSMiddleware  # CORS
 from app.routers.websocket import router as websocket_router
 
 
-app = FastAPI()
-
-
 # Crear la base de datos y las tablas al iniciar la aplicación
 @asynccontextmanager
 async def lifespan(app: FastAPI):

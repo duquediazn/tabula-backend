@@ -1,10 +1,8 @@
 from sqlmodel import SQLModel, create_engine, Session
-import os
+from app.utils.getenv import get_required_env
 
 # Conectar a la base de datos existente
-DATABASE_URL = os.getenv(
-    "DATABASE_URL", "postgresql://admin:admin123@localhost:5432/tabula_db"
-)
+DATABASE_URL = get_required_env("DATABASE_URL")
 
 engine = create_engine(DATABASE_URL, echo=True)
 

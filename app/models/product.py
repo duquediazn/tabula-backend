@@ -1,5 +1,5 @@
 from typing import Optional
-from sqlmodel import Column, SQLModel, Field, String
+from sqlmodel import SQLModel, Field
 
 
 class Product(SQLModel, table=True):
